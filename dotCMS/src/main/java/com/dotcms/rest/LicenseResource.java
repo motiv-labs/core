@@ -25,7 +25,7 @@ import com.dotmarketing.util.UtilMethods;
 import com.liferay.portal.language.LanguageUtil;
 import com.liferay.portal.model.User;
 import java.io.InputStream;
-import java.io.SimpleDateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
