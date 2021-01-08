@@ -380,11 +380,15 @@ public class ContentTool implements ViewTool {
         try {
             final PaginatedArrayList<ContentMap> ret = new PaginatedArrayList<ContentMap>();
 
+            long langId = language.getId();
+            if(condition.contains("languageId")) {
+            	langId =-1;
+			}
             final List<Contentlet> cons = ContentUtils
                     .pullRelated(relationshipName, contentletIdentifier,
                             condition == null ? condition : addDefaultsToQuery(condition),
                             pullParents,
-                            limit, sort, user, tmDate, language.getId(),
+                            limit, sort, user, tmDate, langId,
                             EDIT_OR_PREVIEW_MODE ? null : true);
 
             for (Contentlet cc : cons) {
