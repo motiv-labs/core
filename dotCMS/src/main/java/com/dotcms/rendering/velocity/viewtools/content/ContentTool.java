@@ -381,7 +381,7 @@ public class ContentTool implements ViewTool {
             final PaginatedArrayList<ContentMap> ret = new PaginatedArrayList<ContentMap>();
 
             long langId = language.getId();
-            if(condition.contains("languageId")) {
+            if(condition != null && condition.contains("languageId")) {
             	langId =-1;
 			}
             final List<Contentlet> cons = ContentUtils
